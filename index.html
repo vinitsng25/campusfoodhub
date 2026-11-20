@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Food Court | 11 Stalls Menu Directory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand" id="resetViewBtn">
+                <span class="brand-icon">🍽️</span>
+                <div>
+                    <span class="brand-title">Food Court Directory</span>
+                    <span class="brand-subtitle">11 Stalls • Complete Menu</span>
+                </div>
+            </a>
+
+            <div class="search-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="searchInput" placeholder="Search for momos, chaap, shakes, waffles, thali..." autocomplete="off">
+                <button id="clearSearchBtn" class="clear-search" title="Clear search" hidden>&times;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <span class="hero-badge">Campus Food Hub</span>
+            <h1>Explore All 11 Food Stalls in One Place</h1>
+            <p>Browse complete menus, compare prices, and find your favorite meals, shakes, snacks, and desserts.</p>
+        </div>
+    </section>
+
+    <!-- Stall Navigation Pills -->
+    <nav class="stall-nav-bar" aria-label="Food Stalls Filter">
+        <div class="container">
+            <div class="stall-pills" id="stallPills">
+                <!-- Populated by script.js -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Directory Content -->
+    <main class="container main-content">
+        <div id="statusToolbar" class="status-toolbar">
+            <p id="resultsCount">Showing all 11 food stalls</p>
+            <div class="view-controls">
+                <button id="expandAllBtn" class="btn-secondary">Expand All</button>
+                <button id="collapseAllBtn" class="btn-secondary">Collapse All</button>
+            </div>
+        </div>
+
+        <div id="stallsContainer" class="stalls-container">
+            <!-- Populated by script.js -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div id="emptyState" class="empty-state" hidden>
+            <div class="empty-icon">🔍</div>
+            <h3>No matching items found</h3>
+            <p>Try searching for another dish, drink, or stall name.</p>
+            <button id="resetSearchBtn" class="btn-primary">Reset Filters</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p><strong>Campus Food Court Menu Directory</strong> — Consolidated guide to all 11 food stalls.</p>
+            <p class="footer-note">Prices are listed in INR (₹) as per stall menu boards. S / M / L and Half / Full prices are shown where applicable.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
